@@ -1,4 +1,4 @@
-package com.rodeoelectric.myapp.database.entity;
+package com.rodeoelectric.database.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

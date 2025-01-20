@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/jsp/include/header.jsp" %>
 
 <div class="hero position-relative text-center text-white">
-    <img src="${pageContext.request.contextPath}/static/images/img_1.png" alt="Hero Background" class="img-fluid w-100">
+    <img src="${pageContext.request.contextPath}/static/images/img.png" alt="Hero Background" class="img-fluid w-100">
     <div class="overlay position-absolute top-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center">
         <h1 class="display-4 fw-bold">Welcome to Rodeo Electric</h1>
         <p class="lead">Trusted Electrical Services for Homes & Businesses</p>

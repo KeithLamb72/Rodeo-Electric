@@ -1,6 +1,6 @@
-package com.rodeoelectric.myapp.database.dao;
+package com.rodeoelectric.database.dao;
 
-import com.rodeoelectric.myapp.database.entity.User;
+import com.rodeoelectric.database.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

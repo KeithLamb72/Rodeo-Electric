@@ -1,4 +1,4 @@
-package com.rodeoelectric.myapp.database.entity;
+package com.rodeoelectric.database.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -7,25 +7,27 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "work_orders")
+@Table(name = "order_details")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class WorkOrder {
+public class OrderDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id", nullable = false)
-    private Customer customer;
+    @JoinColumn(name = "order_id", nullable = false)
+    @ToString.Exclude
+    private WorkOrders customer;
 
     @ManyToOne
     @JoinColumn(name = "service_id", nullable = false)
+    @ToString.Exclude
     private Service service;
 
     @Column(name = "start_date", nullable = false)

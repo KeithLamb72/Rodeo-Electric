@@ -1,42 +1,39 @@
-package com.rodeoelectric.myapp.database.entity;
+package com.rodeoelectric.database.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name = "customers")
+@Table(name = "services")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class Customer {
+public class Service {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false)
-    private String name;
+    @Column(name = "service_name", nullable = false)
+    private String serviceName;
 
-    @Column(unique = true)
-    private String email;
+    private String description;
 
-    @Column()
-    private String phone;
-
-    @Column()
-    private String address;
+    @Column(nullable = false, precision = 10)
+    private BigDecimal cost;
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
-    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "service", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    private List<WorkOrder> workOrders;
+    private List<OrderDetails> workOrders;
 }

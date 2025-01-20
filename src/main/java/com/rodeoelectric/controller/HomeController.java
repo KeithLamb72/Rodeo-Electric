@@ -1,4 +1,4 @@
-package com.rodeoelectric.myapp.controller;
+package com.rodeoelectric.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
