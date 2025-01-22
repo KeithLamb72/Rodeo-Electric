@@ -2,8 +2,12 @@ package com.rodeoelectric.database.dao;
 
 import com.rodeoelectric.database.entity.UserRole;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository
-public interface UserRoleDAO extends JpaRepository<UserRole, Integer> {
+import java.util.List;
+
+public interface UserRoleDAO extends JpaRepository<UserRole, Long> {
+    UserRole findById(Integer id);
+    List<UserRole> findByUserId(Integer userId);
+
+    String getRoleName(Integer id);
 }
