@@ -34,6 +34,8 @@
             <a href="${pageContext.request.contextPath}/about" class="nav-link d-inline-block">About</a>
             <a href="${pageContext.request.contextPath}/services" class="nav-link d-inline-block">Services</a>
             <a href="${pageContext.request.contextPath}/contact" class="nav-link d-inline-block">Contact</a>
+            <a href="${pageContext.request.contextPath}/login" class="nav-link d-inline-block">Login</a>
+            <a href="${pageContext.request.contextPath}/signup" class="nav-link d-inline-block">SignUp</a>
         </nav>
     </div>
 </header>
